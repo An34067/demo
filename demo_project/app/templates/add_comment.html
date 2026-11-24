@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block main_content %}
+    <h2>Оставить комментарий</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn">Отправить</button>
+    </form>
+{% endblock main_content %}

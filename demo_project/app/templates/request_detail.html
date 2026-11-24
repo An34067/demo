@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+    <h2>Комментарии к заявке</h2>
+    {% for comment in fields %}
+        <li>{{comment.text}}</li>
+        {% empty %}
+        <p>Комментариев пока нет</p>
+    {% endfor %}
+{% endblock main_content %}
